@@ -18,23 +18,23 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false|
 |email|string|null: false, unique; true|
-|password|string|null: false, unique; true|
+|password|string|null: false, unique: true|
 
 ### Association
 - has_many :messages
-- has_many :users_groups
+- has_many : groups through: users_groups
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
+|group_name|string|null: false, unique: true|
 
 ### Association
-- has_many :users_groups
+- has_many : users through: users_groups
 - has_many :messages
 
-## groups_usersテーブル
+## users_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
