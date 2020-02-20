@@ -1,0 +1,46 @@
+.side-bar {
+  @include box-prop (300px, 100vh, $color-253141);
+  float: left;
+  &__user-name {
+    height: 100px;
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+    .top-items{
+      width: 100%;
+      @include flex_between(flex, space-between);
+      &__name {
+        @include font-prop($font-16, $color-fff,$font-bold);
+      }
+      &__icons {
+        width: 60px;
+        font-size: $font-16;
+        @include flex_between(flex, flex-end);
+        &__edit {
+          color: $color-fff;
+          width: auto;
+          display: block;
+        }
+        &__cog {
+          @extend .top-items__icons__edit;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+  &__group-list {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 0 20px 0 20px;
+    .group-items {
+      &__name {
+        @include font-prop($font-15, $color-fff,$font-bold);
+        padding: 10px 0 5px;
+      }
+      &__message {
+        @include font-prop($font-11, $color-fff,$font-bold);
+        padding-bottom: 40px;
+      }
+    }
+  }
+}
