@@ -61,6 +61,4 @@ gem 'font-awesome-sass'
 gem 'pry-rails'
 
 gem 'devise'
-
-gem 'rails-i18n', '~> 5.1'
 >>>>>>> Stashed changes
