@@ -1,0 +1,18 @@
+/*mixin*/
+/*要素のサイズ、カラー*/
+@mixin box-prop ($width, $height, $bgcolor) {
+  width: $width;
+  height: $height;
+  background-color: $bgcolor;
+}
+/*フォントのサイズ、カラー、太さ*/
+@mixin font-prop ($size, $color, $weight){
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+/*flexを使用しての横並び*/
+@mixin flex_between($flex,$content) {
+  display: $flex;
+  justify-content: $content;
+}
