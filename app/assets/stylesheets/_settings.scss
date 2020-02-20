@@ -1,34 +1,18 @@
-/*mixin用ページ*/
-@mixin flex_between($flex,$content) {
-  display: $flex;
-  justify-content: $content;
-}
-@mixin font-prop ($size, $color, $weight){
-  font-size: $size;
-  color: $color;
-  font-weight: $weight;
-}
+/*mixin*/
+/*要素のサイズ、カラー*/
 @mixin box-prop ($width, $height, $bgcolor) {
   width: $width;
   height: $height;
   background-color: $bgcolor;
 }
-
-
-/*フォント関係*/
-$font-11: 11px;
-$font-12: 12px;
-$font-14: 14px;
-$font-15: 15px;
-$font-16: 16px;
-$font-bold: bold;
-
-
-$color-fff: #ffffff;
-$color-38aef0: #38aef0;
-$color-333: #333333;
-$color-999: #999999;
-$color-434A54: #434A54;
-$color-fafafa: #fafafa;
-$color-d2d2d2: #d2d2d2;
-$color-253141: #253141;
+/*フォントのサイズ、カラー、太さ*/
+@mixin font-prop ($size, $color, $weight){
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+/*flexを使用しての横並び*/
+@mixin flex_between($flex,$content) {
+  display: $flex;
+  justify-content: $content;
+}
