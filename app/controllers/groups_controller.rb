@@ -1,5 +1,8 @@
 class GroupsController < ApplicationController
 
+
+
+
 def new
   @group = Group.new
   @group.users << current_user
@@ -21,7 +24,7 @@ end
 def update
   @group = Group.find(params[:id])
   if @group.update(group_params)
-    redirect_to root_path, notice: 'グループを更新しました'
+    redirect_to group_messages_path(@group.id), notice: 'グループを更新しました'
   else
     render :edit
   end
