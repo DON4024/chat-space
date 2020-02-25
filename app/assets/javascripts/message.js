@@ -1,6 +1,7 @@
 $(function(){ 
   function buildHTML(message){
-   if ( message.image == "null" ) {
+   if ( message.image ) {
+
      var html =
       `<div class="message-group">
         <div class="message-group__text-items">
@@ -44,6 +45,7 @@ $('#new_message').on('submit', function(e){
   e.preventDefault();
   var formData = new FormData(this);
   var url = $(this).attr('action')
+  console.log(url);
   $.ajax({
     url: url,
     type: "POST",
@@ -64,4 +66,3 @@ $('#new_message').on('submit', function(e){
   });
 })
 });
-
