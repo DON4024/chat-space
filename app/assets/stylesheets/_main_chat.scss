@@ -37,10 +37,12 @@
     }
   }
   &__message-list{
+    overflow: scroll;
     @include box-prop (100%, calc(100vh - 190px), $color-fafafa);
     padding: 35px 0 0 40px;
     .message-group {
       margin-bottom: 46px;
+      
       &__text-items {
         display: flex;
         &__name {
@@ -62,7 +64,7 @@
   }
   &__message-form{
     @include box-prop (100%, 90px, $color-d2d2d2);
-    .form-group{
+    .new_message{
       height: 100%;
       margin: 0 40px 0 40px;
       @include flex_between(flex, space-between);
@@ -82,6 +84,7 @@
           font-size: 1.3em;
           cursor: pointer;
           position: absolute;
+          top: 16px;
           right: 10px;
           &__file {
             display: none;

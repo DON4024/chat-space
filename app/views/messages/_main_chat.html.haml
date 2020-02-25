@@ -12,32 +12,14 @@
         = link_to edit_group_path(@group.id), class: "edit" do
           Edit
   .chat-main__message-list
-    .message-group
-      = render @messages
+    = render @messages
 
 
--# 表示するとエラーあとで解決させる
-  -# .chat-main__message-form
-  -#   .formーgroup
-  -#     = form_for [@group, @message] do |f|
-  -#       = f.text_field :content, class: 'message-box', placeholder: 'type a message'
-  -#       .form__mask
-  -#         = f.label :image, class: 'input-box__image' do
-  -#           = icon('fas', 'image', class: 'icon')
-  -#           = f.file_field :image, class: 'input-box__image__file'
-  -#       = f.submit 'Send', class: 'submit-btn'
-
-
-        -# .message
-    -#   .upper-message
-    -#     .upper-message__user-name
-    -#       = message.user.name
-    -#     .upper-message__date
-    -#       = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-    -#   .lower-message
-    -#     - if message.content.present?
-    -#       %p.lower-message__content
-    -#         = message.content
-    -#     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-
-
+  .chat-main__message-form
+    = form_for  [@group, @message] do |f|
+      .input-box
+        = f.text_field :content, class: 'message-box', placeholder: 'type a message' 
+        = f.label :image, class: 'a' do
+          = icon('fas', 'image', class: 'input-box__image')
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
