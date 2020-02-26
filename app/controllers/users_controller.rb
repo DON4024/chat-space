@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     end
   end
 
-
   def edit
   end
 
@@ -19,9 +18,6 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-
-
-
 
 
 
