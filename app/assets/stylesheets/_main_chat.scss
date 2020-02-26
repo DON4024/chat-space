@@ -8,7 +8,7 @@
     border-bottom: #eeeeee;
     .info-items {
       @include flex_between(flex, space-between);
-      margin: 0 20px 0 20px;
+      margin: 0 40px 0 40px;
       &__name-items {
         margin-top: 35px;
         &__group-name {
